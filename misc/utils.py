@@ -252,7 +252,8 @@ def store_cmd(opt=None):
     return cmd
 
 def get_progress_bar(msg, max_val):
-    return ProgressBar(widgets=['[*] %s' % msg, Percentage(), Bar(), ETA()], max_value=max_val).start()
+    # return ProgressBar(widgets=['[*] %s' % msg, Percentage(), Bar(), ETA()], max_value=max_val).start()
+    return ProgressBar(widgets=['[*] %s' % msg, Percentage(), Bar(), ETA()], maxval=max_val).start()
 
 def clear_progressbar():
     # moves up 3 lines
